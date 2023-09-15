@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>설문조사 실습 다시</title>
+    </head>
+    <body>
+        <form>
+            <caption><h3>설문조사</h3></caption>
+            이름<input type="text" name="name">
+            <br />
+
+            이메일<input type="email" name="email" placeholder="email@naver.com">
+
+            <p><h4><b>나이</b></h4></p>
+
+            <input type="radio" name="age" value="over10 under20"> 10대
+            <input type="radio" name="age" value="over20 under30"> 20대
+            <input type="radio" name="age" value="over30 under40"> 30대
+            <input type="radio" name="age" value="over40 under50"> 40대
+            <input type="radio" name="age" value="over50"> 50대 이상
+
+            <p><h4><b>원하는 강의(복수응답가능)</b></h4></p>
+
+            <input type="checkbox" name="lecture" value="html">html
+            <input type="checkbox" name="lecture" value="css">css
+            <input type="checkbox" name="lecture" value="js">js
+
+            <br /><br />
+
+            <textarea cols="100" rows="10" placeholder="하고 싶은 말을 써주세요 :D"></textarea>
+
+            <input type="button" name="submit" value="제출">
+
+        </form>
+        
+    </body>
+    </html>
