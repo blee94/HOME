@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>html연습2 form/input태그</title>
+    </head>
+    <body>
+        <form>
+            <input type="text" value="text">
+            <hr />
+            <p>좋아하는 강아지 종류 (중복선택가능)</p>
+            <p><input type="checkbox" name="checkbox" value="리트리버"> 리트리버</p>
+            <p><input type="checkbox" name="checkbox" value="비숑"> 비숑</p>
+            <p><input type="checkbox" name="checkbox" value="불독"> 불독</p>
+            <p><input type="checkbox" name="checkbox" value="말티즈"> 말티즈</p>
+            <!-- name: 같은 분류는 같은 이름으로 value: backend로 전달되는 값 -->
+            <p>가장 좋아하는 강아지는?</p>
+            <p><input type="radio" name="radio" value="리트리버"> 리트리버</p>
+            <p><input type="radio" name="radio" value="비숑"> 비숑</p>
+            <p><input type="radio" name="radio" value="불독"> 불독</p>
+            <p><input type="radio" name="radio" value="말티즈"> 말티즈</p>
+            <p>현재 같이 사는 댕댕이 수</p>
+            <select name="select_option">
+                <option value="option0">0</option>
+                <option value="option1">1</option>
+                <option value="option2">2</option>
+                <option value="option3">3</option>
+                <option value="option4">4</option>
+                <option value="option more than5">5~</option>
+            </select>
+        </form>
+    </body>
+</html>
