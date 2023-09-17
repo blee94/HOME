@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>css 인라인,내장,링크,선택자 우선순위</title>
+        <!-- head태그 내부에 style태그를 미리 선언 -->
+            <style>
+                h1 {
+                    color: green;
+                }
+                h2 {
+                    color: aqua;
+                    background-color: darkgrey;
+                }
+                h3 {
+                    color: black;
+                }
+            </style>
+            <link rel="stylesheet" href="./css_1.css">
+            
+    </head>
+
+    <body>
+        <h1>제목</h1>
+        <h1 style="color: brown;">제목2</h1>
+        <!-- 인라인 방식이 내장 방식 보다 우선 적용 -->
+        <h2>부제목</h2>
+        <h3>부부제목</h3>
+        <!-- 내장과 링크 둘 다 style 선언했지만 늦게 쓰여진 링크가 적용 -->
+        <h3 style="color: firebrick;">hello</h3>
+        <hr />
+        <p>hello</p>
+        <!-- 전체 선택자 *{}를 통해 기본 style 선언 -->
+        <div>Hello</div>
+        <!-- 단일(태그) 선택자 선언으로 인해 전체 선택자보다 우선적으로 style 적용 -->
+        <div class="brown">HELLO</div>
+        <!-- 단일 선택자로 선언된 태그지만 class선택으로 인해 우선 적용 -->
+        <div class="brown" id="blue" >HELLO</div>
+        <!-- class선택으로 선언됬지만 id선택으로인해 우선 적용 -->
+        <hr />
+        <div>
+            <ul>
+                <li>망고</li>
+                <li class="yellow">딸기</li>
+                <li>포도</li>
+                <li class="green">자두</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>망고</li>
+                <li class="purple">딸기</li>
+                <li>포도</li>
+                <li class="green">자두</li>
+            </ul>
+        </div>
+        <div>멜론</div>
+        <!-- div하위선택: 적용. div자식선택: ul의 자식인 li는 미적용. ul자식선택: 자식인 li적용 -->
+        <hr />
+        <section>
+            <h4>hi4</h4>
+            <h5>hi5</h5>
+            <h5>hi5</h5>
+            <h6>hi6</h6>
+        </section>
+        <section>
+            <h4>hi4</h4>
+            <h5>hi5</h5>
+            <h5>hi5</h5>
+            <h6>hi6</h6>
+        </section>
+        <!-- 형제 선택자. 지정된 h4 다음의 지정된 h5가 +(다음 h5하나)/~(다음 h5모두)의 style 적용 -->
+        <hr />
+        <section class="white">
+            <p>11</p>
+            <p>22</p>
+            <div>33</div>
+            <span>44</span>
+        </section>
+        <hr />
+        <h1 class="hot">
+            <p>11</p>
+            <p>22</p>
+            <div>33</div>
+            <span class="cold">44</span>
+        </h1>
+        <hr />
+        <p class="cold">
+            <ol>
+                <li>ㅁㅁ</li>
+                <li>ㄴㄴ</li>
+                <li class="summer">ㅂㅂ</li>
+                <li class="winter">ㅇㅇ</li>
+            </ol>
+        </p>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,55 @@
+h3 {
+    color: blueviolet;
+}
+* {
+    color: orange;
+}
+div {
+    color: pink;
+}
+.brown {
+    color: brown;
+}
+#blue {
+    color: blue;
+}
+div .yellow{
+    color: yellow;
+    background-color: green;
+}
+ul > .purple{
+    color: purple;
+}
+div > .green{
+    color: green;
+}
+h4 + h5 {
+    color: hotpink;
+}
+h4 ~ h5 {
+    color: hotpink;
+}
+p:hover {
+    color: green;
+}
+div:active {
+    background-color: black;
+}
+span:hover {
+    color: black;
+}
+section span:last-child {
+    background-color: black;
+}
+.white *:nth-child(2) {
+    color: blue;
+}
+.hot *:nth-child(n+1) {
+    color: black;
+}
+ol >.winter {
+    color: blue;
+}
+p .summer{
+    background-color: red;
+}
