@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>선택자 연습</title>
+        <link rel="stylesheet" href="./css_2.css">
+    </head>
+    <body>
+        <div>
+            <ul class="vegi">
+                <li class="purple">고구마</li>
+                <li class="green">배추</li>
+                <li class="orange">오렌지</li>
+                <li class="red">토마토</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="fruit">
+                <li class="purple">고구마</li>
+                <li class="green">배추</li>
+                <li class="orange">오렌지</li>
+                <li class="red">토마토</li>
+            </ul>
+        </div>
+        <span>
+            <ul class="vegi">
+                <li class="purple">고구마</li>
+                <li class="green">배추</li>
+                <li class="orange">오렌지</li>
+                <li class="red">토마토</li>
+            </ul>
+        </span>
+        <section class="rainbow">
+            <ul class="vegi">
+                <li class="purple">고구마</li>
+                <li class="green">배추</li>
+                <li class="orange">오렌지</li>
+                <li class="red">토마토</li>
+            </ul>
+        </section>
+        <!-- .클래스를 최초 경로로 설정가능. 
+              rainbow의 자식은 vegi, vegi의 자식에 green이 포함. 두번 명령도 가능. -->
+              <hr />
+        <section>
+            <div>빨</div>
+            <h1>주</h1>
+            <h3>노</h3>
+            <h3>노</h3>
+            <h1>주</h1>
+            <h3>노</h3>
+            <h3>노</h3>
+            <span>초</span>
+            <span>초</span>
+            <span>초</span>
+            <p>파</p>
+        </section>
+        <hr />
+        <section class="dog">
+            <h1>도</h1>
+            <h1>도</h1>
+            <h1>도</h1>
+            <h3>레</h3>
+            <h3>레</h3>
+            <h3>레</h3>
+            <div>미</div>
+            <div>미</div>
+            <div>미</div>
+            <div class="cat">미</div>
+        </section>
+        <hr />
+        <!-- 가상요소선택자 -->
+        <div class="box">
+            안녕
+        </div>
+        <hr />
+        <!-- 속성선택자 -->
+        <input type="text" value="hello" class="textbox"><br/>
+        <input type="text" value="hello" disabled><br />
+        <input type="password" value="0000">
+        <input type="button" value="제출" name="submit" class="button">
+    </body>
+</html>

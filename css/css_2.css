@@ -1,0 +1,62 @@
+div .vegi {
+    color: brown;
+}
+.red {
+    color: red;
+}
+div >.fruit {
+    background-color: pink;
+}
+div .green {
+    color: green;
+}
+span .orange {
+    background-color: orange;
+}
+/* .rainbow .purple {
+    color: purple;
+} */
+.rainbow >.vegi >.green{
+    background-color: green;
+}
+h1 + h3 {
+    background-color: yellow;
+}
+h1 ~ span {
+    color: orange;
+}
+div + h1 +h3{
+    color: blue;
+}
+.dog h1 ~ h3 {
+    color: brown;
+}
+.dog h1 + h1 {
+    background-color: pink;
+}
+.dog h3 + h3:hover{
+    color: blue;
+}
+.dog *:nth-child(7):active{
+    background-color: black;
+}
+.dog *:not(*:nth-child(8)) {
+    color: red;
+}
+.box::after {
+    content: "하세요";
+}
+[disabled] {
+    color: blue;
+}
+.textbox {
+    width: 50px;
+    padding: 5px;
+    margin: 10px;
+}
+.button:hover {
+    background-color: white;
+}
+[type="password"]:focus {
+    color: red;
+}
