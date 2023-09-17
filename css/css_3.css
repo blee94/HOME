@@ -1,0 +1,13 @@
+.box {
+    box-sizing: border-box;
+    border: 6px black solid;
+    background-color: blanchedalmond;
+    width: 300px;
+    height: 300px;
+    padding: 100px;
+    margin: 10px;
+    color: red;
+    border-radius: 50%;
+    /* border-spacing: 0; */
+
+}
