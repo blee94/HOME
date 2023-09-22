@@ -9,7 +9,8 @@
     height: 50px;
     width: 50px;
     margin: 5px;
-    position: absolute;
+    position: relative;
+    left: 55px;
     /* transform: skew(10deg); */
 }
 .small-box2 {
@@ -33,17 +34,51 @@
     position: absolute;
     left: 110px;
     top: 55px;
+    z-index: 999;
 }
 .small-box4 {
     background-color: rgb(121, 48, 115);
     height: 50px;
     width: 50px;
     margin: 5px;
+    /* position: absolute; */
+    right: 0px;
+    top: 130px;
     position: absolute;
-    left: 180px;
-    top: 68px;
-    position: sticky;
-    /* 스크롤시 fixed와 비슷하게 위치가 고정된 상태로 따라옴 */
+    transform: translate(100px);
+}
+.small-box5 {
+    background-color: rgb(121, 48, 115);
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    /* position: absolute; */
+    right: 65px;
+    top: 130px;
+    position: absolute;
+    transform: scale(0.5);
+}
+.small-box6 {
+    background-color: rgb(121, 48, 115);
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    /* position: absolute; */
+    right: 150px;
+    top: 130px;
+    position: absolute;
+    transform: rotate(10deg);
+}
+.small-box7 {
+    background-color: rgb(121, 48, 115);
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    /* position: absolute; */
+    right: 230px;
+    top: 130px;
+    position: absolute;
+    transform: skew(10deg);
 }
 .box2:hover {
     background-color: rgb(151, 44, 44);
@@ -62,16 +97,22 @@
 }
 .box3 {
     background-color: rgb(141, 123, 123);
+    color: black;
+    text-align: center;
     height: 300px;
     width: 300px;
     /* position: relative; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    /* justify-content: stretch; */
     /* align-items: flex-start; */
     /* align-items: center; */
     /* align-content: flex-start; */
+    /* flex-basis: ; */
 }
 .sb {
     background-color: pink;
