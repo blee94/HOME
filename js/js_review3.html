@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js review 3</title>
+  </head>
+  <body>
+    <script>
+      let sum = 0
+      let n = 0
+      while (true) {
+        if (n % 2 == 0 || n % 3 == 0) {
+          if (n == 100) break
+          sum += n
+        }
+        n++
+      }
+      console.log(sum)
+
+      let sum2 = 0
+      for (let i = 0; i < 100; i++) {
+        if (i % 4 == 0) continue
+        if (i % 6 == 0) sum2 += i
+      }
+      console.log(sum2)
+
+      let sum3 = 0
+      for (let k = 0; k < 100; k++) {
+        if (k % 6 == 0) {
+          if (k % 4 == 0) {
+            continue
+          }
+          sum3 += k
+        }
+      }
+      console.log(sum3)
+    </script>
+  </body>
+</html>
