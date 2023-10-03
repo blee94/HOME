@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js review</title>
+  </head>
+  <body>
+    <div class="box" onclick="test();">클릭</div>
+    <script>
+      var insect = "butterfly"
+      let animal = "dog"
+      const color = "blue"
+      console.log(insect)
+      console.log(animal)
+      console.log(color)
+      console.log("문자", 2, "문자")
+      console.log("문자" + 2 + "문자") // 변수를 문자로 변환
+
+      let apple
+      console.log(apple)
+
+      let data = ["male", "female", 3, true, null, undefined]
+      console.log(data[1], data[2], data[3], data[4], data[5])
+      console.log(data[1] + data[2], data[3], data[4], data[5])
+      let color2 = [
+        "red",
+        "yellow",
+        "green",
+        "pink",
+        "orange",
+        "purple",
+        "violet",
+      ]
+      console.log(color2[1], color2[2], color2[3], color2[4])
+      console.log(color2.indexOf("violet"))
+      console.log(color2)
+      color2.push("black")
+      color2.unshift("gray")
+      console.log(color2)
+
+      let furniture = {
+        name: "desk",
+        color: "white",
+        isNew: false,
+      }
+      console.log(furniture)
+
+      console.log(typeof "안녕")
+      console.log(typeof 3)
+      console.log(typeof false)
+      console.log(typeof NaN)
+
+      let numb = 1123
+      let textnumb = String(numb)
+      console.log(typeof textnumb)
+
+      console.log(Number("123123123"))
+      console.log(Number("hello"))
+      console.log(Number(false))
+
+      function mult(numb1, numb2) {
+        console.log("multiply")
+        return numb1 * numb2
+      }
+      console.log(mult(2, 3))
+      console.log(mult(3, 21))
+
+      function calc(n1, n2, n3) {
+        return n1 ** n2 / n3
+      }
+      console.log(calc(3, 3, 3))
+
+      function test() {
+        alert("test")
+      }
+
+      //   let name = prompt("write your name")
+
+      //   if (7 > 5) {
+      //     alert("wrong")
+      //   }
+
+      let number1 = 1
+      number1 == 1 ? console.log("right") : console.log("wrong")
+
+      for (let n = 0; n < 10; n++) {
+        console.log(n + 1)
+      }
+
+      for (let i = 0; i < 1000; i++) {
+        if (i % 13 == 0 && i % 2 == 1) {
+          console.log(i)
+        }
+      }
+      let k = 0
+      while (true) {
+        console.log(k + 1)
+        k++
+        if (k == 10) break
+      }
+    </script>
+  </body>
+</html>
