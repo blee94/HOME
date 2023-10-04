@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>색 바꾸기</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+      .orange {
+        background-color: orange;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .pink {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" class="red" onclick="color()"></div>
+    <script>
+      function color() {
+        const color = $("#box");
+        if (color.hasClass("red")) {
+          color.removeClass("red");
+          color.addClass("orange");
+        } else if (color.hasClass("orange")) {
+          color.removeClass("orange");
+          color.addClass("yellow");
+        } else if (color.hasClass("yellow")) {
+          color.removeClass("yellow");
+          color.addClass("green");
+        } else if (color.hasClass("green")) {
+          color.removeClass("green");
+          color.addClass("blue");
+        } else if (color.hasClass("blue")) {
+          color.removeClass("blue");
+          color.addClass("pink");
+        } else {
+          color.removeClass("pink");
+          color.addClass("red");
+        }
+      }
+    </script>
+  </body>
+</html>
