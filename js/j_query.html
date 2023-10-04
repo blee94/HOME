@@ -1,0 +1,145 @@
+dd<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery 메서드1</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <style>
+      .container {
+        background-color: skyblue;
+        display: flex;
+        height: 150px;
+      }
+
+      .item {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+
+      .pink {
+        background-color: pink;
+      }
+
+      .green {
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">안녕하세요</div>
+
+    <button type="button" onclick="submitjava();">변환1</button>
+    <button type="button" onclick="submitjquery();">변환2</button><br /><br />
+    <hr />
+
+    <input type="text" placeholder="이름을 입력하세요" />
+
+    <button type="button" onclick="getValue();">버튼1</button>
+    <button type="button" onclick="setValue();">버튼2</button><br /><br />
+    <hr />
+
+    <ul type="circle">
+      <li id="apple">사과</li>
+      <li id="banana">바나나</li>
+      <li id="strawberry">딸기</li>
+      <li id="grape">포도</li>
+    </ul>
+
+    <button type="button" onclick="getAttr();">버튼1</button>
+    <button type="button" onclick="setAttr();">버튼2</button><br /><br />
+    <hr />
+
+    <script>
+      //-----------jQuery 기본
+
+      function submitjava() {
+        document.getElementById("div1").innerHTML = "반갑습니다.";
+      }
+
+      function submitjquery() {}
+      $("#div1").html("잘지내요.");
+      //    $("선택자").html("변경할 내용");
+
+      //----------
+
+      function submitjava() {
+        document.getElementById("div1").setAttribute("style", "border:2px solid red;");
+      }
+
+      function submitjquery() {
+        $("#div1").css("border", "3px dotted blue");
+        //    $("선택자").css("css속성", "속성값");
+      }
+
+      //------------메서드
+
+      //value: input,select와 같이 사용자로부터 입력을 받는 태그의 value값을 가져오거나 설정할수있음.
+
+      //-------get/setValue메서드
+
+      function getValue() {
+        let value = $("input").val();
+        alert(value);
+      }
+
+      function setValue() {
+        $("input").val("해윙");
+      }
+      //------------attr메서드
+      //attr: 선택된 태그의 특정 속성값을 가져오거나 설정하는 기능
+      function getAttr() {
+        let ulType = $("ul").attr("type");
+        alert(ulType);
+      }
+
+      function setAttr() {
+        $("#strawberry").attr("style", "color:red;");
+      }
+    </script>
+
+    <!-- --------------------------jQuery 동작함수 -->
+
+    <div class="container">
+      <div class="item pink"></div>
+      <div class="item pink"></div>
+      <div class="item pink"></div>
+    </div>
+
+    <button type="button" onclick="usePrepend();">prepend</button>
+    <button type="button" onclick="useAppend();">append</button>
+    <button type="button" onclick="useBefore();">before</button>
+    <button type="button" onclick="useAfter();">after</button>
+    <button type="button" onclick="useRemove();">remove</button>
+    <button type="button" onclick="useEmpty();">empty</button>
+
+    <script>
+      //선택된 요소 앞에 자식 요소 추가
+      function usePrepend() {
+        $(".container").prepend(`<div class="item green"></div>`);
+      }
+      //선택된 요소 뒤에 자식 요소 추가
+      function useAppend() {
+        $(".container").append(`<div class="item green"></div>`);
+      }
+      //형제 요소를 앞에 추가
+      function useBefore() {
+        $(".container").before(`<div class="item green"></div>`);
+      }
+      //형제 요소를 뒤에 추가
+      function useAfter() {
+        $(".container").after(`<div class="item green"></div>`);
+      }
+      //선택한 요소 자체를 삭제
+      function useRemove() {
+        $(".container").remove();
+      }
+      //선택한 요소의 하위 요소들을 모두 삭제
+      function useEmpty() {
+        $(".container").empty();
+      }
+    </script>
+  </body>
+</html>
