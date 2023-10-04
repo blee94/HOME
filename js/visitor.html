@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>방명록</title>
+  </head>
+  <body>
+    <caption>
+      방명록입니다<br /><br />
+    </caption>
+    <div>
+      <b>작성자</b>
+      <input type="text" id="writer" /><br />
+    </div>
+    <div>
+      <b>내용 </b>
+      <input type="text" id="content" /><br /><br />
+    </div>
+
+    <button type="button" onclick="submit()">작성</button><br /><br />
+
+    <table border="1px" cellspacing="0px" cellpadding="3px" width="500px">
+      <thead>
+        <tr align="center">
+          <td>번호</td>
+          <td>작성자</td>
+          <td>내용</td>
+          <td>작성일</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      let number = 1;
+      function submit() {
+        let writer = document.getElementById("writer").value;
+
+        let content = document.getElementById("content").value;
+
+        const date = new Date();
+        const datenow = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDay()} ${date.getHours()}:${date.getMinutes()}`;
+        console.log(datenow);
+
+        let tr = document.createElement("tr");
+        let td_number = document.createElement("td");
+        td_number.innerText = number;
+        let td_writer = document.createElement("td");
+        td_writer.innerText = writer;
+        let td_content = document.createElement("td");
+        td_content.innerText = content;
+        let td_date = document.createElement("td");
+        td_date.innerText = datenow;
+
+        tr.append(td_number, td_writer, td_content, td_date);
+
+        const tbody = document.querySelector("tbody");
+        tbody.append(tr);
+        number++;
+      }
+    </script>
+  </body>
+</html>
