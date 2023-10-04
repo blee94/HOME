@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js DOM</title>
+  </head>
+  <body>
+    <div></div>
+    <div id="hi">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <div class="welcome"></div>
+    <div class="greetings"></div>
+
+    <div>안녕</div>
+
+    <script>
+      // -------------DOM 기본
+      // DOM: HTML을 조작하기 위한 기능이 존재하는 객체(document)
+      //js를 이용하여 HTML과 CSS에 동적인 효과를 줄수있다.
+      // BOM: 브라우저를 조작하기 위한 기능이 있는 객체(navigator, screen, location, etc)
+      console.log(window);
+
+      // window.alert("안녕")
+      // window.confirm("반가워")
+      // //확인: true, 취소: false 값을 받음
+      // window.prompt("오늘 날씨 어때?")
+      // //사용자의 입력값을 받음
+
+      document.body.style.background = "lightgray";
+
+      console.log(location.href);
+      console.log(location.pathname);
+
+      // -----------DOM 관련 API
+      console.log(document.getElementsByTagName("div"));
+      console.log(document.getElementById("hi"));
+      console.log(document.getElementsByClassName("welcome")[0]);
+      console.log(document.querySelector("div.greetings")); // div 클래스 중 greetings를 찾는다
+      console.log(document.querySelectorAll("div")); // 모든 div 클래스를 찾는다
+
+      const divTag = document.querySelector("div");
+
+      divTag.innerText = "<h1>잘가</h1>";
+      // divTag.innerHTML = "<h1>잘가</h1>";
+
+      console.log(hi.parentElement);
+      console.log(hi.children);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체 선언 방식</title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        setNumbers: function (num1, num2) {
+          ;(this.num1 = 1), (this.num2 = 2)
+        },
+        sum: function () {
+          return this.num1 + this.num2
+        },
+        multiply: function () {
+          return this.num1 * this.num2
+        },
+      }
+      // obj.setNumbers(6, 10)
+      console.log(obj.sum)
+      console.log(obj.multiply)
+
+      class Car {
+        constructor() {
+          //class와 함께 사용
+          this.wheels = 4
+        }
+      }
+      const myCar = new Car()
+      console.log(myCar)
+
+      class SmallCar extends Car {
+        //Car에 상속된 SmallCar
+        constructor() {
+          super()
+          // 부모에 정의되어있는 (this.wheels) 를 가져오는것
+          this.doors = 2
+        }
+      }
+      const mySmallCar = new SmallCar()
+      console.log(mySmallCar)
+
+      class BigCar extends Car {
+        constructor() {
+          super()
+          this.doors = 4
+        }
+      }
+      const myBigCar = new BigCar()
+      console.log(myBigCar)
+
+      class Aircraft {
+        constructor() {
+          this.isTakeoff = false
+        }
+        takeOff() {
+          this.isTakeoff = true
+          console.log("이륙 완료")
+          return true
+        }
+      }
+
+      class FighterAircraft extends Aircraft {
+        fire() {
+          if (!this.isTakeoff) {
+            console.log("이륙 후 발사할 수 있습니다!")
+            return false
+          }
+          console.log("미사일을 발사 했습니다!")
+          return true
+        }
+      }
+      const myCraft = new FighterAircraft()
+      myCraft.takeOff()
+      myCraft.fire()
+    </script>
+  </body>
+</html>
