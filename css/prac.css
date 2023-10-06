@@ -1,0 +1,27 @@
+.container {
+  width: 500px;
+  height: 200px;
+  border: 2px solid black;
+  background-color: rgb(245, 239, 239);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.b1 {
+  background-color: lightblue;
+}
+.b2 {
+  background-color: lightcoral;
+}
+.b3 {
+  background-color: lightgreen;
+}
