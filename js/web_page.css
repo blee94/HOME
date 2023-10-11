@@ -1,0 +1,44 @@
+* {
+}
+
+:root {
+    --nav-height-xl: 80px;
+    --nav-height-lg: 60px;
+    --nav-height-sm: 40px;
+}
+
+header {
+    width: 100%;
+    height: var(--nav-height-lg);
+    display: flex;
+}
+header .header_inner {
+    background-color: lightblue;
+    height: var(--nav-height-lg);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+header .header_inner .material-symbols-outlined {
+    font-size: 45px;
+    position: relative;
+    left: 250px;
+}
+
+header .header_inner .content {
+    margin: 5px;
+    position: relative;
+    left: 300px;
+}
+a {
+    text-decoration-line: none;
+}
+
+.map {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 100px;
+}
+
+div .carousel-inner {
+}

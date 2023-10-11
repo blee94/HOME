@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+.hidden {
+    display: none;
+}
+img {
+    width: 100%;
+    position: absolute;
+}
+form {
+    position: absolute;
+    z-index: 999;
+}
+input {
+    border: none;
+    background: transparent;
+    margin: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: floralwhite;
+}
+#putName {
+    margin-top: 650px;
+}
+#greetings {
+    z-index: 999;
+    position: absolute;
+    color: white;
+    margin-top: 650px;
+}
+::placeholder {
+    color: bisque;
+    opacity: 1;
+}
+#clock {
+    position: absolute;
+    font-size: 70px;
+    color: white;
+    margin-top: 500px;
+    z-index: 999;
+}
+#quote {
+    position: absolute;
+    top: 800px;
+    color: white;
+    text-align: center;
+    z-index: 999;
+    font-size: 20px;
+}
