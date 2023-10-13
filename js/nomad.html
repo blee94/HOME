@@ -1,134 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>노마드</title>
-        <link rel="stylesheet" href="./nomad.css" />
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    </head>
-    <body class="container">
-        <!-- form -->
-        <form class="logInSheet hidden" id="formname">
-            <input type="text" id="putName" placeholder="ur name" />
-            <button type="button" onclick="logIn()">Log In</button><br />
-            <input type="text" id="todoForm" placeholder="write todo" />
-        </form>
-        <!-- greeting -->
-        <h1 id="greetings" class="hidden"></h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>노마드</title>
+    <link rel="stylesheet" href="./nomad.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  </head>
+  <body class="container">
+    <!-- form -->
+    <form class="logInSheet hidden" id="formname">
+      <input type="text" id="putName" placeholder="ur name" />
+      <button type="button" onclick="logIn()">Log In</button><br />
+      <input type="text" id="todoForm" placeholder="write todo" />
+    </form>
+    <!-- greeting -->
+    <h1 id="greetings" class="hidden"></h1>
 
-        <!-- clock -->
-        <h2 id="clock">00:00:00</h2>
+    <!-- clock -->
+    <h2 id="clock">00:00:00</h2>
 
-        <!-- quote -->
-        <div id="quote">
-            <span></span><br />
-            <span></span>
-        </div>
-        <!-- todo -->
-        <ul id="todoList"></ul>
-        <script>
-            //-------------logIn
-            function logIn() {
-                const loginInfo = $(".logInSheet #putName").val();
-                console.log(loginInfo);
-                $(".logInSheet").addClass("hidden");
-                $("#greetings").html(`Hello ${loginInfo} !`);
-                $("#greetings").removeClass("hidden");
-                localStorage.setItem("userName", loginInfo);
-                showGreetings(loginInfo);
-            }
+    <!-- quote -->
+    <div id="quote">
+      <span></span><br />
+      <span></span>
+    </div>
+    <!-- todo -->
+    <ul id="todoList"></ul>
 
-            function showGreetings(loginInfo) {}
+    <!-- weather -->
+    <div id="weather">
+      <span></span><br />
+      <span></span>
+    </div>
+    <script>
+      //-------------logIn
+      function logIn() {
+        const loginInfo = $(".logInSheet #putName").val();
+        console.log(loginInfo);
+        $(".logInSheet").addClass("hidden");
+        $("#greetings").html(`Hello ${loginInfo} !`);
+        $("#greetings").removeClass("hidden");
+        localStorage.setItem("userName", loginInfo);
+        showGreetings(loginInfo);
+      }
 
-            const savedName = localStorage.getItem("loginInfo");
-            if (savedName === null) {
-                $("#formname").removeClass("hidden");
-            } else {
-                $("#greetings").removeClass("hidden");
-            }
+      function showGreetings(loginInfo) {}
 
-            // ------------clock
-            const clock = document.querySelector("h2#clock");
+      const savedName = localStorage.getItem("loginInfo");
+      if (savedName === null) {
+        $("#formname").removeClass("hidden");
+      } else {
+        $("#greetings").removeClass("hidden");
+      }
 
-            function getClock() {
-                const date = new Date();
-                const hours = String(date.getHours()).padStart(2, "0");
-                const minutes = String(date.getMinutes()).padStart(2, "0");
-                const seconds = String(date.getSeconds()).padStart(2, "0");
+      // ------------clock
+      const clock = document.querySelector("h2#clock");
 
-                clock.innerText = `${hours}:${minutes}:${seconds}`;
-            }
-            getClock();
-            setInterval(getClock, 1000);
+      function getClock() {
+        const date = new Date();
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+        const seconds = String(date.getSeconds()).padStart(2, "0");
 
-            //---------quotes
-            const quotes = [
-                {
-                    quote: "When you have faults, do not fear to abandon them.",
-                    author: "-Confucius-",
-                },
-                {
-                    quote: "Age is no guarantee of maturity.",
-                    author: "-Lawana Blackwell-",
-                },
-                {
-                    quote: "You will face many defeats in life, but never let yourself be defeated.",
-                    author: "-Maya Angelou-",
-                },
-                {
-                    quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
-                    author: "-Nelson Mandela-",
-                },
-                {
-                    quote: "Life is either a daring adventure or nothing at all.",
-                    author: "-Helen Keller-",
-                },
-            ];
-            const quote = document.querySelector("#quote span:first-child");
-            const author = document.querySelector("#quote span:last-child");
+        clock.innerText = `${hours}:${minutes}:${seconds}`;
+      }
+      getClock();
+      setInterval(getClock, 1000);
 
-            console.log(quotes[Math.floor(Math.random() * quotes.length)]);
+      //---------quotes
+      const quotes = [
+        {
+          quote: "When you have faults, do not fear to abandon them.",
+          author: "-Confucius-",
+        },
+        {
+          quote: "Age is no guarantee of maturity.",
+          author: "-Lawana Blackwell-",
+        },
+        {
+          quote: "You will face many defeats in life, but never let yourself be defeated.",
+          author: "-Maya Angelou-",
+        },
+        {
+          quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+          author: "-Nelson Mandela-",
+        },
+        {
+          quote: "Life is either a daring adventure or nothing at all.",
+          author: "-Helen Keller-",
+        },
+      ];
+      const quote = document.querySelector("#quote span:first-child");
+      const author = document.querySelector("#quote span:last-child");
 
-            const todayQuote = quotes[Math.floor(Math.random() * quotes.length)];
-            quote.innerText = todayQuote.quote;
-            author.innerText = todayQuote.author;
+      console.log(quotes[Math.floor(Math.random() * quotes.length)]);
 
-            //-------------background
-            const images = ["01.jpg", "02.jpg"];
+      const todayQuote = quotes[Math.floor(Math.random() * quotes.length)];
+      quote.innerText = todayQuote.quote;
+      author.innerText = todayQuote.author;
 
-            const chosenImage = images[Math.floor(Math.random() * images.length)];
+      //-------------background
+      const images = ["01.jpg", "02.jpg"];
 
-            const bgImage = document.createElement("img");
-            bgImage.src = `../img/${chosenImage}`;
-            console.log(bgImage);
+      const chosenImage = images[Math.floor(Math.random() * images.length)];
 
-            document.body.appendChild(bgImage);
+      const bgImage = document.createElement("img");
+      bgImage.src = `../img/${chosenImage}`;
+      console.log(bgImage);
 
-            // ---------------todo list
-            const todoForm = document.getElementById("todoForm");
-            const todoList = document.getElementById("todoList");
-            const todoInput = document.querySelector("#todoForm input");
+      document.body.appendChild(bgImage);
 
-            function handleToDoSubmit(event) {
-                event.preventDefault();
-                const newTodo = todoInput.value;
-                console.log(todoInput.value);
-                todoInput.value = "";
-            }
-            todoForm.addEventListener("submit", handleToDoSubmit);
+      // ---------------todo list
+      const todoForm = document.getElementById("todoForm");
+      const todoList = document.getElementById("todoList");
+      const todoInput = document.querySelector("#todoForm input");
 
-            // -----------weather
-            function onGeoOk(position) {
-                const lat = position.coords.latitude;
-                const lnt = position.coords.longitude;
-                console.log("ur location is: ", lat, lnt);
-            }
-            function onGeoError() {
-                alert("no cant do");
-            }
+      function handleToDoSubmit(event) {
+        event.preventDefault();
+        const newTodo = todoInput.value;
+        console.log(todoInput.value);
+        todoInput.value = "";
+      }
+      todoForm.addEventListener("submit", handleToDoSubmit);
 
-            navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
-        </script>
-    </body>
+      // -----------weather
+
+      const API_KEY = "f823eb21b434ae52380c15c1a62dfca7";
+
+      function onGeoOk(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        console.log("ur location is: ", lat, lon);
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            const city = document.querySelector("#weather span:first-child");
+            const weather = document.querySelector("#weather span:last-child");
+            city.innerText = data.name;
+            weather.innerText = `${data.weather[0].main} / ${data.main.temp}deg`;
+          });
+      }
+      function onGeoError() {
+        alert("cant get weather info");
+      }
+
+      navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+    </script>
+  </body>
 </html>
