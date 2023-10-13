@@ -1,0 +1,66 @@
+* {
+  background-color: lightslategray;
+}
+header.header {
+  display: flex;
+  height: 80px;
+  background-color: gray;
+}
+::placeholder {
+  color: white;
+}
+div.nav {
+  display: flex;
+}
+.container {
+  display: flex;
+}
+.container div {
+  border: 3px solid black;
+  margin: 10px;
+  width: 200px;
+  height: 300px;
+}
+div.container #box1 {
+  background-color: lightpink;
+}
+div.container #box2 {
+  background-color: lightgreen;
+}
+div.container #box3 {
+  background-color: lightsalmon;
+}
+div.container #box4 {
+  background-color: lightseagreen;
+}
+input#coin {
+  height: 50px;
+  width: 50px;
+  color: white;
+}
+input#urChoice {
+  height: 50px;
+  width: 200px;
+  color: white;
+}
+input#urCoin {
+  height: 50px;
+  width: 50px;
+  color: white;
+}
+div.container2 {
+  display: flex;
+  flex-direction: column;
+}
+button#up {
+  height: 20px;
+  width: 20px;
+}
+button#down {
+  height: 20px;
+  width: 20px;
+}
+button#run {
+  height: 20px;
+  width: 20px;
+}
