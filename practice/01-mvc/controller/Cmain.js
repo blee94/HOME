@@ -10,3 +10,10 @@ exports.submit = (req, res) => {
 exports.success = (req, res) => {
   res.render('success');
 };
+
+exports.getEmails = (req, res) => {
+  user.getEmails((result) => {
+    console.log('Cmain.js: ', result);
+    res.render('user', { data: result });
+  });
+};

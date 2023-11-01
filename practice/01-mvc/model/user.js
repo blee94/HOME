@@ -6,11 +6,12 @@ const cnn = mysql.createConnection({
   database: 'blee_db',
 });
 
-connection.connect();
-
-connection.query('SELECT * FROM index', function (error, result, fields) {
-  if (error) throw error;
-  console.log('The solution is: ', result[0].solution);
-});
-
-connection.end();
+exports.getEmails = (cb) => {
+  conn.query(`SELECT * FROM email`, (err, rows) => {
+    if (err) {
+      throw err;
+    }
+    console.log('user.js:', rows);
+    cb(rows);
+  });
+};
