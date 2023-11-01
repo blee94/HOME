@@ -18,10 +18,16 @@ body {
   position: absolute;
 }
 
-.img1 {
+.p1 {
   position: absolute;
   right: 20px;
   top: 20px;
+}
+
+.p2 {
+  visibility: hidden;
+  position: absolute;
+  z-index: 999;
 }
 
 .box {
@@ -109,4 +115,31 @@ body {
 
 .error {
   background-color: #ffe8e6;
+}
+
+/* 모바일 */
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 375px;
+    height: 800px;
+    left: 0px;
+    top: 0px;
+  }
+  .container2 {
+    top: 204px;
+    width: 375px;
+  }
+  .p2 {
+    visibility: visible;
+  }
+  .p1 {
+    visibility: hidden;
+  }
+  .box {
+    left: 10px;
+  }
+  .box2 {
+    top: 240px;
+  }
 }
