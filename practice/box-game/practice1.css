@@ -1,13 +1,14 @@
 * {
-  background-color: lightslategray;
+  background-color: rgb(255, 255, 255);
+  font-size: 20px;
 }
 header.header {
   display: flex;
   height: 80px;
-  background-color: gray;
+  background-color: rgb(136, 133, 145);
 }
 ::placeholder {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 div.nav {
   display: flex;
@@ -36,17 +37,22 @@ div.container #box4 {
 input#coin {
   height: 50px;
   width: 50px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 input#urChoice {
   height: 50px;
-  width: 200px;
-  color: white;
+  width: 100px;
+  color: rgb(0, 0, 0);
 }
 input#urCoin {
   height: 50px;
-  width: 50px;
-  color: white;
+  width: 70px;
+  color: rgb(0, 0, 0);
+}
+input#urTotalCoin {
+  height: 50px;
+  width: 110px;
+  color: rgb(0, 0, 0);
 }
 div.container2 {
   display: flex;

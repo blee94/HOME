@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>즉석 복권 연습</title>
+    <link rel="stylesheet" href="./practice1.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav"></div>
+    </header>
+    <div class="container">
+      <div id="box1" class="box">box1</div>
+      <div id="box2" class="box">box2</div>
+      <div id="box3" class="box">box3</div>
+      <div id="box4" class="box">box4</div>
+    </div>
+    <div class="container2">
+      betCoin<input type="text" id="coin" placeholder="Coin" disabled /> upIcon<button type="button" id="up"></button> downIcon<button type="button" id="down"></button> urChoice<input
+        type="text"
+        id="urChoice"
+        placeholder="urChoice"
+        disabled
+      />
+      run<button type="button" id="run"></button> leftCoin<input type="text" id="urCoin" placeholder="urCoin" disabled /> totalCoin<input
+        type="text"
+        id="urTotalCoin"
+        placeholder="urTotalCoin"
+        disabled
+      />
+    </div>
+    <script>
+      let coin = 0;
+      let urCoin = 10;
+      // 상자 고르기
+      let boxChoice;
+      $('.box').on('click', function () {
+        const choice = $(this).text();
+        $('input[id=urChoice]').val(choice);
+        boxChoice = this;
+        console.log(boxChoice);
+
+        // 코인 추가
+
+        $('#coin').val(coin);
+        $('#urCoin').val(urCoin);
+        $('#urTotalCoin').val(coin + urCoin);
+
+        // 코인 올리기
+        $('#up').on('click', function () {
+          if (coin < 3) {
+            coin++;
+            urCoin--;
+          } else {
+            alert('maximum 3');
+          }
+          $('#coin').val(coin);
+          $('#urCoin').val(urCoin);
+          $('#urTotalCoin').val(coin + urCoin);
+          // console.log(coin);
+          // console.log(urCoin);
+        });
+
+        // 코인 내리기
+        $('#down').on('click', function () {
+          coin--;
+          urCoin++;
+          if (coin <= 0) {
+            alert('minimum 1');
+          }
+          $('#coin').val(coin);
+          $('#urCoin').val(urCoin);
+          $('#urTotalCoin').val(coin + urCoin);
+          // console.log(coin);
+          // console.log(urCoin);
+        });
+
+        // 상자 확률 설정
+        $('#run').on('click', function () {
+          const boxes = ['box1', 'box2', 'box3', 'box4'];
+          const randomBox = boxes[Math.floor(Math.random() * boxes.length)];
+          console.log(`결과:`, randomBox);
+
+          //선택 결과
+          const isWin = true;
+          if (randomBox == choice) {
+            console.log(isWin);
+            // 결과에 따른 보상지급
+            urCoin = coin;
+            $('#urCoin').val(urCoin);
+            $('#urTotalCoin').val(coin + urCoin);
+            console.log(`return coin`, coin);
+          } else {
+            console.log('fail');
+            urCoin -= coin;
+            $('#urCoin').val(urCoin);
+            $('#urTotalCoin').val(coin + urCoin);
+            console.log(`lose coin`, coin);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
