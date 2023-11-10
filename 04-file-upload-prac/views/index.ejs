@@ -42,7 +42,7 @@
 
     <script>
       function signUp() {
-        const form = document.forms['register'];
+        const form = document.forms["register"];
         const formData = new FormData();
         const file = form.profile;
         formData.append('userid', form.userid.value);
@@ -52,15 +52,21 @@
         formData.append('profile', file.files[0]);
 
         axios({
-          method: 'POST',
-          url: '/upload',
+          method: "POST",
+          url: "/upload",
           data: formData,
           headers: {
             'Content-Type': 'multipart/form-data',
           },
         }).then((res) => {
-          const { src, userid, password, username, age } = res.data;
-          const card = document.getElementById('register-result');
+          const {
+            src,
+            userid,
+            password,
+            username,
+            age
+          } = res.data
+          const card = document.getElementById("register-result")
           card.innerHTML = `<div class="card">
             <img src="/${src}" width="200" />
             <h3>${userid}님 환영합니다!</h3>
@@ -69,8 +75,8 @@
               <li>이름: ${username}</li>
               <li>나이: ${age}</li>
             </ul>
-          </div>`;
-        });
+          </div>`
+        })
       }
     </script>
   </body>
