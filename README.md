@@ -20,9 +20,13 @@ TMDB(The Movie Database)에서 영화 정보 api를 받아와 MySql 데이터 �
 
 디렉토리 구조
 4FLEX/
+
 ├── config/
+
 │ ├── envs/
+
 │ │ └── key.env
+
 │ └── config.json
 ├── controller/
 │ ├── CDetail.js
