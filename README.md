@@ -19,82 +19,82 @@ TMDB(The Movie Database)에서 영화 정보 api를 받아와 MySql 데이터 �
 ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
 
 디렉토리 구조
-4FLEX
-├──config
-│ ├──envs
-│ │ └──key.env
-│ └──config.json
-├──controller
-│ ├──CDetail.js
-│ ├──CFindid.js
-│ ├──CFindpw.js
-│ ├──CGetMovies.js
-│ ├──CMain.js
-│ ├──CMypage.js
-│ ├──CSearch.js
-│ ├──CSignin.js
-│ ├──CSignup.js
-│ ├──CUser.js
-│ └──dummyCmt.js
-├──model
-│ ├──Comment.js
-│ ├──CommentLike.js
-│ ├──FavMovie.js
-│ ├──getMovie.js
-│ ├──index.js
-│ ├──MovieInfo.js
-│ ├──MovieLike.js
-│ └──User.js
-├──node_modules
-├──routes
-│ ├──datail.js
-│ ├──findid.js
-│ ├──findpw.js
-│ ├──indes.js
-│ ├──mypage.js
-│ ├──search.js
-│ ├──signin.js
-│ ├──signout.js
-│ └──signup.js
-├──static
-│ ├──css
-│ │ ├──mypage
-│ │ │ ├──mypage.css
-│ │ │ ├──mypageComment.css
-│ │ │ ├──mypageFav.css
-│ │ │ └──mypageMovieLike.css
-│ │ ├──detail.review.css
-│ │ ├──detail.css
-│ │ ├──findid.css
-│ │ ├──findpw.css
-│ │ ├──footer.css
-│ │ ├──header.css
-│ │ ├──index.css
-│ │ ├──main.css
-│ │ ├──search.css
-│ │ ├──signin.css
-│ │ └──signup.css
-│ └──img
-├──uploads
-├──views
-│ ├──mypage
-│ │ ├──mypage.ejs
-│ │ ├──mypageComment.ejs
-│ │ ├──mypageCommentLike.ejs
-│ │ ├──mypageFav.ejs
-│ │ ├──mypageInfo.ejs
-│ │ └──mypageMovieLike.ejs
-│ ├──detail.ejs
-│ ├──findid.ejs
-│ ├──findpw.ejs
-│ ├──footer.ejs
-│ ├──header.ejs
-│ ├──main.ejs
-│ ├──search.ejs
-│ ├──signin.ejs
-│ └──signup.ejs
-├──.gitignore
-├──index.js
-├──package-lock.json
-├──package.json
-└──README.md
+4FLEX/
+├── config/
+│ ├── envs/
+│ │ └── key.env
+│ └── config.json
+├── controller/
+│ ├── CDetail.js
+│ ├── CFindid.js
+│ ├── CFindpw.js
+│ ├── CGetMovies.js
+│ ├── CMain.js
+│ ├── CMypage.js
+│ ├── CSearch.js
+│ ├── CSignin.js
+│ ├── CSignup.js
+│ ├── CUser.js
+│ └── dummyCmt.js
+├── model/
+│ ├── Comment.js
+│ ├── CommentLike.js
+│ ├── FavMovie.js
+│ ├── getMovie.js
+│ ├── index.js
+│ ├── MovieInfo.js
+│ ├── MovieLike.js
+│ └── User.js
+├── node_modules/
+├── routes/
+│ ├── datail.js
+│ ├── findid.js
+│ ├── findpw.js
+│ ├── indes.js
+│ ├── mypage.js
+│ ├── search.js
+│ ├── signin.js
+│ ├── signout.js
+│ └── signup.js
+├── static/
+│ ├── css/
+│ │ ├── mypage/
+│ │ │ ├── mypage.css
+│ │ │ ├── mypageComment.css
+│ │ │ ├── mypageFav.css
+│ │ │ └── mypageMovieLike.css
+│ │ ├── detail.review.css
+│ │ ├── detail.css
+│ │ ├── findid.css
+│ │ ├── findpw.css
+│ │ ├── footer.css
+│ │ ├── header.css
+│ │ ├── index.css
+│ │ ├── main.css
+│ │ ├── search.css
+│ │ ├── signin.css
+│ │ └── signup.css
+│ └── img/
+├── uploads/
+├── views/
+│ ├── mypage/
+│ │ ├── mypage.ejs
+│ │ ├── mypageComment.ejs
+│ │ ├── mypageCommentLike.ejs
+│ │ ├── mypageFav.ejs
+│ │ ├── mypageInfo.ejs
+│ │ └── mypageMovieLike.ejs
+│ ├── detail.ejs
+│ ├── findid.ejs
+│ ├── findpw.ejs
+│ ├── footer.ejs
+│ ├── header.ejs
+│ ├── main.ejs
+│ ├── search.ejs
+│ ├── signin.ejs
+│ └── signup.ejs
+├── .gitignore
+├── index.js
+├── package-lock.json
+├── package.json
+└── README.md
