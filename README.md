@@ -15,15 +15,17 @@ TMDB(The Movie Database)에서 영화 정보 api를 받아와 MySql 데이터 �
 배포 주소  
 http://101.101.218.151:8000/
 
-팀 소개
+팀 소개  
 FE:  
 구은현  
 마이페이지- figma작성, html작성, db연결, CRUD구현, canva제작  
 이병진  
 상세페이지/회원가입/로그인- figma작성, html작성, db연결  
-BE: 허윤우  
+BE:  
+허윤우  
 마이페이지/회원가입/로그인- api 명세서 제작, CRUD보조, 발표  
-풀스택: 박윤혜
+풀스택:  
+박윤혜  
 메인페이지- api/db관리, notion관리, figma작성, html작성, db연결, 회원 상호작용 구현
 
 프로젝트 설치 및 설정  
