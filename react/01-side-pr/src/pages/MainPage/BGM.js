@@ -165,7 +165,7 @@ const BGM = () => {
   return (
     <div>
       <h2>
-        Music Player <span class='material-icons'>music_note</span>
+        Music Player <span className='material-icons'>music_note</span>
       </h2>
       <audio ref={audioPlayer} src={currentTrack.src} volume={volume} />
       <div className='MusicTrackBox'>
