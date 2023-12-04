@@ -1,0 +1,94 @@
+.ContainerLinkBoss {
+  border: 1px wheat solid;
+  border-radius: 10px;
+  width: 1200px;
+  height: 600px;
+  position: relative;
+}
+.ContainerLinkBoss2 {
+  border: 1px lightgreen solid;
+  border-radius: 10px;
+  width: 1200px;
+  height: 600px;
+  position: relative;
+}
+.ContainerLinkBoss3 {
+  border: 1px hotpink solid;
+  border-radius: 10px;
+  width: 1200px;
+  height: 600px;
+  position: relative;
+}
+.ContainerLinkBoss4 {
+  border: 1px lightcoral solid;
+  border-radius: 10px;
+  width: 1200px;
+  height: 600px;
+  position: relative;
+}
+.ContainerLinkBoss5 {
+  border: 1px rgb(99, 34, 99) solid;
+  border-radius: 10px;
+  width: 1200px;
+  height: 600px;
+  position: relative;
+}
+.MusicBossLink1 {
+  position: relative;
+  top: 100px;
+  left: 20px;
+  height: 367px;
+  width: 646px;
+  border: 3px wheat solid;
+  box-shadow: 0 0 10px lightgoldenrodyellow, 0 0 10px lightgoldenrodyellow inset;
+}
+.MusicBossLink2 {
+  position: relative;
+  top: 100px;
+  left: 20px;
+  height: 367px;
+  width: 646px;
+  border: 3px lightgreen solid;
+  box-shadow: 0 0 10px lightgreen, 0 0 10px lightgreen inset;
+}
+.MusicBossLink3 {
+  position: relative;
+  top: 100px;
+  left: 20px;
+  height: 367px;
+  width: 646px;
+  border: 3px hotpink solid;
+  box-shadow: 0 0 10px hotpink, 0 0 10px hotpink inset;
+}
+.MusicBossLink4 {
+  position: relative;
+  top: 100px;
+  left: 20px;
+  height: 367px;
+  width: 646px;
+  border: 3px lightcoral solid;
+  box-shadow: 0 0 10px lightcoral, 0 0 10px lightcoral inset;
+}
+.MusicBossLink5 {
+  position: relative;
+  top: 100px;
+  left: 20px;
+  height: 367px;
+  width: 646px;
+  border: 3px rgb(99, 34, 99) solid;
+  box-shadow: 0 0 10px rgb(99, 34, 99), 0 0 10px rgb(99, 34, 99) inset;
+}
+.MusicBossLink6 {
+  position: relative;
+  top: 100px;
+  left: 20px;
+  height: 367px;
+  width: 646px;
+  border: 3px wheat solid;
+  box-shadow: 0 0 10px lightgoldenrodyellow, 0 0 10px lightgoldenrodyellow inset;
+}
+.nameBoss {
+  position: absolute;
+  top: 30px;
+  left: 850px;
+}
