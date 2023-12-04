@@ -4,6 +4,7 @@
   width: 1200px;
   height: 600px;
   position: relative;
+  display: flex;
 }
 .ContainerLinkBoss2 {
   border: 1px lightgreen solid;
@@ -11,6 +12,7 @@
   width: 1200px;
   height: 600px;
   position: relative;
+  display: flex;
 }
 .ContainerLinkBoss3 {
   border: 1px hotpink solid;
@@ -18,6 +20,7 @@
   width: 1200px;
   height: 600px;
   position: relative;
+  display: flex;
 }
 .ContainerLinkBoss4 {
   border: 1px lightcoral solid;
@@ -25,6 +28,7 @@
   width: 1200px;
   height: 600px;
   position: relative;
+  display: flex;
 }
 .ContainerLinkBoss5 {
   border: 1px rgb(99, 34, 99) solid;
@@ -32,6 +36,7 @@
   width: 1200px;
   height: 600px;
   position: relative;
+  display: flex;
 }
 .MusicBossLink1 {
   position: relative;
@@ -90,5 +95,50 @@
 .nameBoss {
   position: absolute;
   top: 30px;
-  left: 850px;
+  left: 820px;
+}
+.AboutBoss {
+  width: 500px;
+  height: 230px;
+  /* border: 1px white solid; */
+  position: relative;
+  top: 100px;
+  left: 70px;
+}
+.Strategy {
+  position: relative;
+  top: 350px;
+  right: 288px;
+  width: 100px;
+  height: 30px;
+}
+.LinkStrategy {
+  position: relative;
+  text-decoration: none;
+  color: wheat;
+  top: 351px;
+  right: 275px;
+  height: 30px;
+}
+.Reward {
+  position: relative;
+  top: 350px;
+  width: 90px;
+  right: 230px;
+  height: 30px;
+}
+.LinkReward {
+  position: relative;
+  top: 350px;
+  width: 50px;
+  right: 210px;
+  height: 30px;
+  color: wheat;
+}
+
+#carouselExampleCaptions.carousel {
+  position: absolute;
+  width: 300px;
+  bottom: 40px;
+  right: 155px;
 }
